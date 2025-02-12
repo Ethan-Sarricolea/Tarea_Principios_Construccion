@@ -31,4 +31,4 @@ en App:
 - Volver
 - Salir
 
-![alt text](image.png)
+![alt text](img\image.png)

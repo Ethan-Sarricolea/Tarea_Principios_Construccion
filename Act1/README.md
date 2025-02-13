@@ -26,7 +26,7 @@ Funciones en App:
 - Volver
 - Salir
 
-![alt text](img\image.png)
+![alt text](act1\img\image.png)
 
 Reglas aplicadas:
 

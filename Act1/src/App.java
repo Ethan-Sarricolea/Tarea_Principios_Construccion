@@ -56,6 +56,11 @@ public class App {
         System.out.println("--Sistema cerrado--");
     }
 
+    /**
+     * Metodo encargado de mostrar el personal registrado segun la clase
+     * 
+     * @param option Parametro con el tipo de Personal por agregar
+     */
     public static void verPersonal(int option){
         // Crear un listado de clases que heredan Personal
         ArrayList<Class<? extends Personal>> listado = new ArrayList<>();
@@ -74,7 +79,12 @@ public class App {
         System.out.print("\n");
     }
 
-    // KISS??
+    /**
+     * Este metodo se encarga de agregar personal segun el tipo seleccionado
+     * 
+     * @param option Parametro con el tipo de Personal por agregar
+     * @param input Clase Scanner para recibir informacion de las instancias
+     */
     public static void agregarPersonal(int option, Scanner input){
         switch (option) {
             case 1:

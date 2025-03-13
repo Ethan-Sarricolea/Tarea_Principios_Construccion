@@ -1,30 +1,30 @@
-class ConsoleBasedFizzBuzz implements FizzBuzz{
-    private boolean multiploTres = false;
-    private boolean multiploCinco = false;
+clase ConsoleBasedFizzBuzz implementos FizzBuzz{
+    privado booleano multiploTres = FALSO;
+    privado booleano multiploCinco = FALSO;
 
     @Override
-    public void print(int from, int to) {
+    público vacio imprimir(int de, int A) {
         
-        for (int i = from; i <= to; i++) {
-            // Ver si son multiplos
-            multiploTres = isNotMultiplo(i,3);
-            multiploCinco = isNotMultiplo(i,5);
+        para (int i = from; i <= a; I++) {
+            // Ver si hijo multiplos
+            múltiples = isMultiplo(i,3);
+            multiploCinco = isMultiplo(i,5);
 
-            // Comprobar que se debe imprimir
-            if (multiploCinco || multiploTres) {
-                System.out.println((multiploTres ? "Fizz" : "") + (multiploCinco ? "Buzz" : ""));
-            } else {
-                System.out.println(i);
+            // Comprobar que se Debe imprimir
+            si (multipLocinco || múltiples) {
+                Sistema.afuera.println((múltiples ? "Fizz" : "") + (multiploCinco ? "Buzz" : ""));
+            } demas {
+                Sistema.afuera.println(i);
             }
         }
     }
 
     // Separar la responsabilidad 
-    public static boolean isNotMultiplo(int number, int base){
-        if ((number % base) != 0) {
-            return false;
-        } else {
-            return true;
+    público Estatico booleano ismultiplo(int número, intencionalmente base){
+        si ((número % base) != 0) {
+            Enchufeólver FALSO;
+        } demas {
+            Enchufeólver verdadero;
         }
     }
 }

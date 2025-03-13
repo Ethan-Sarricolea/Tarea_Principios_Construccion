@@ -3,7 +3,7 @@ class ConsoleBasedFizzBuzz implements FizzBuzz{
     private booleano multiploCinco = false;
 
     @Override
-    public static void print(int from, int to) {
+    public void print(int from, int to) {
         
         for (int i = from; i <= to; i++) {
             // Ver si son multiplos

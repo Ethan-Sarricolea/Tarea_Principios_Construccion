@@ -10,22 +10,30 @@
  */
 
 class ConsoleBasedFizzBuzz implements FizzBuzz{
+    private boolean multiploTres = false;
+    private boolean multiploCinco = false;
 
     @Override
     public void print(int from, int to) {
         
         for (int i = from; i <= to; i++) {
-            System.out.println(this.comprobarNumero(i));
+            // Ver si son multiplos
+            multiploTres = isNotMultiplo(i,3);
+            multiploCinco = isNotMultiplo(i,5);
+
+            // Comprobar que se debe imprimir
+            if (multiploCinco || multiploTres) {
+                System.out.println((multiploTres ? "Fizz" : "") + (multiploCinco ? "Buzz" : ""));
+            } else {
+                System.out.println(i);
+            }
         }
     }
 
-    public String comprobarNumero(int numero){
-        boolean multiploTres = isMultiplo(numero,3);
-        boolean multiploCinco = isMultiplo(numero,5);
-
-        if (multiploCinco || multiploTres) {
-            return((multiploTres ? "Fizz" : "")
-                    + (multiploCinco ? "Buzz" : ""));
+    // Separar la responsabilidad 
+    public static boolean isNotMultiplo(int number, int base){
+        if ((number % base) != 0) {
+            return false;
         } else {
             return (Integer.toString(numero));
         }
@@ -35,5 +43,3 @@ class ConsoleBasedFizzBuzz implements FizzBuzz{
         return ((number % base) == 0);
     }
 }
-
-// Sarricolea Cortés Ethan Yahel

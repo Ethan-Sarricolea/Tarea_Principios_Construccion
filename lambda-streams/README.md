@@ -133,3 +133,56 @@ try {
 ```
 
 # Streams
+
+Un stream es un flujo de datos que pasan por una especie de tuberia, donde se opera con ellos uno por uno.
+
+Es decir, a la entrada entra algo y a la salida sale lo mismo pero modificado, filtrado o procesado.
+
+Tiene dos tipos de operadores **finales y no finales**
+
+- El operador final termina el flujo
+- El no final continua el flujo despues de terminar con el (es decir, se puede realizar mas procesos despues)
+
+## Operadores no finales
+
+- filter()
+- map() transfrma los elemntos
+- sorted() acomoda los valores
+- distinct() elimina los duplicados
+- limit() limita las operaciones
+- skip() omite un numero especifico de elementos
+- allMatch() verifica que todos cumplan la condición
+- anyMatch() verifica si algun elemento cumple con la condición
+- noneMatch() verifica si nadie la cumple
+
+## Operadores finales
+
+- forEach()
+- reduce (binary operator) concatena los valores en uno solo
+- collect() recoge los elementos enn una coleccion
+
+```java
+// Esta lista / arreglo convertirlas a streams
+List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "David");
+
+// Using Stream API para llamar un consumer
+names.stream()
+    .filter( (name) -> name.startsWith("A"))
+    .map(Strung::toUpperCase())
+    .forEach(Systen.out::println);
+
+// Reduce
+names.stream()
+    .reduce("Resultado: ", (a, b) -> a + " " + b)
+    .forEach(System.out::println);
+
+// Collector
+List<String> result = names.stream()
+    .map( (name) -> name.toUppercase())
+    .collect(Collectors.toList()); // o solo con toList()
+
+result.stream().forEach(System.out::println);
+```
+
+
+
